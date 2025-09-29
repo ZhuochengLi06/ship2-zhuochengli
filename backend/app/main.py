@@ -17,7 +17,7 @@ app.add_middleware(
 
 @app.get("/healthz")
 async def healthz() -> dict:
-    return {"status": "ok"}
+    return {"status": "ok", "service": "backend"}
 
 
 app.include_router(items_router)
